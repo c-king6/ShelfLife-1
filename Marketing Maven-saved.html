@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShelfLife Vision Board - The Future of Freshness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        display: ['Playfair+Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            teal: '#14B8A6',
+                            orange: '#F59E0B',
+                            lime: '#84CC16',
+                            purple: '#8B5CF6',
+                            blue: '#3B82F6',
+                            dark: '#0F172A',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #84CC16 0%, #14B8A6 50%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(150px, auto);
+            gap: 1.5rem;
+        }
+        @media (max-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 640px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .media-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-[#050810] text-slate-200 font-sans selection:bg-brand-teal selection:text-white">
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden pt-20 pb-16 px-6">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-teal/10 via-transparent to-transparent opacity-50"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10 text-center">
+            <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider uppercase bg-brand-teal/10 text-brand-teal border border-brand-teal/20 rounded-full">
+                Product Roadmap 2024
+            </span>
+            <h1 class="text-6xl md:text-8xl font-display italic font-bold mb-6 tracking-tight leading-none">
+                Shelf<span class="gradient-text">Life</span> Vision
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+                Reimagining the modern kitchen through intelligent conservation, seamless connectivity, and community action.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        
+        <!-- Strategy 1: The Calculator -->
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-px flex-grow bg-gradient-to-r from-transparent to-brand-teal/50"></div>
+                <h2 class="text-3xl font-display italic font-semibold text-brand-teal shrink-0">Content Strategy</h2>
+                <div class="h-px flex-grow bg-gradient-to-l from-transparent to-brand-teal/50"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Visual Board -->
+                <div class="lg:col-span-7 relative group">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-brand-teal to-brand-lime opacity-20 blur-xl group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative glass-card rounded-3xl overflow-hidden aspect-[4/3] media-container">
+                        <img src='https://opal.google/board/blobs/c0ca9269-a875-46b3-9a0f-6e811d007110' alt='Cost of Waste Vision Board' />
+                    </div>
+                </div>
+
+                <!-- Info Card -->
+                <div class="lg:col-span-5 flex flex-col justify-center space-y-8">
+                    <div>
+                        <h3 class="text-4xl font-bold mb-4">The "Cost of Waste" <br/><span class="text-brand-lime">Interactive Calculator</span></h3>
+                        <p class="text-slate-400 text-lg leading-relaxed">
+                            A high-impact tool designed to provide immediate emotional and financial "sticker shock." Users visualize their annual savings through dynamic, glowing currency symbols and growth arrows.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 rounded-2xl bg-brand-dark/50 border border-brand-teal/20">
+                            <span class="text-xs font-bold text-brand-teal uppercase tracking-widest block mb-2">Benefit</span>
+                            <p class="text-sm font-medium">Viral shareability & immediate value justification.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-brand-dark/50 border border-brand-orange/20">
+                            <span class="text-xs font-bold text-brand-orange uppercase tracking-widest block mb-2">Target</span>
+                            <p class="text-sm font-medium">Frugal households & eco-conscious leads.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-slate-500">Other Content Initiatives</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-slate-300">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-teal"></div> Ingredient Spotlight Series
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-300">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-teal"></div> Zero-Waste Lead Magnet
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-300">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-teal"></div> SEO Leftover Library
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy 2: Social Media -->
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-px flex-grow bg-gradient-to-r from-transparent to-brand-orange/50"></div>
+                <h2 class="text-3xl font-display italic font-semibold text-brand-orange shrink-0">Community & Social</h2>
+                <div class="h-px flex-grow bg-gradient-to-l from-transparent to-brand-orange/50"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Info Card (Order Swapped for Mobile/Desktop interest) -->
+                <div class="lg:col-span-5 lg:order-1 order-2 flex flex-col justify-center space-y-8">
+                    <div>
+                        <h3 class="text-4xl font-bold mb-4">#EmptyTheFridge <br/><span class="text-brand-orange">Weekly Challenge</span></h3>
+                        <p class="text-slate-400 text-lg leading-relaxed">
+                            Gamifying the zero-waste movement. We're turning "leftovers" into "gourmet" through community-driven challenges, vibrant content, and shared recipe inspiration.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-3xl border-l-4 border-l-brand-orange">
+                        <blockquote class="text-brand-orange italic font-display text-xl">
+                            "Turning the produce drawer of death into a culinary canvas."
+                        </blockquote>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-slate-500">Social Ecosystem</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-brand-orange/10 text-brand-orange border border-brand-orange/20 rounded-full text-xs font-bold">Fridge Glow-Up Reels</span>
+                            <span class="px-3 py-1 bg-brand-orange/10 text-brand-orange border border-brand-orange/20 rounded-full text-xs font-bold">Panic Chef Hotline</span>
+                            <span class="px-3 py-1 bg-brand-orange/10 text-brand-orange border border-brand-orange/20 rounded-full text-xs font-bold">Influencer Boxes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Board -->
+                <div class="lg:col-span-7 lg:order-2 order-1 relative group">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-brand-orange to-red-500 opacity-20 blur-xl group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative glass-card rounded-3xl overflow-hidden aspect-[4/3] media-container">
+                        <img src='https://opal.google/board/blobs/13e92bfb-a406-4d55-99b4-63482eac18d9' alt='Social Challenge Vision Board' />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy 3: API Integration -->
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-px flex-grow bg-gradient-to-r from-transparent to-brand-purple/50"></div>
+                <h2 class="text-3xl font-display italic font-semibold text-brand-purple shrink-0">Partnerships</h2>
+                <div class="h-px flex-grow bg-gradient-to-l from-transparent to-brand-purple/50"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Visual Board -->
+                <div class="lg:col-span-7 relative group">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-brand-purple to-brand-blue opacity-20 blur-xl group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative glass-card rounded-3xl overflow-hidden aspect-[4/3] media-container">
+                        <img src='https://opal.google/board/blobs/c836ce7a-b096-4cba-8f8a-2ad9940ca17d' alt='API Integration Vision Board' />
+                    </div>
+                </div>
+
+                <!-- Info Card -->
+                <div class="lg:col-span-5 flex flex-col justify-center space-y-8">
+                    <div>
+                        <h3 class="text-4xl font-bold mb-4">Grocery Delivery <br/><span class="text-brand-purple">API Ecosystem</span></h3>
+                        <p class="text-slate-400 text-lg leading-relaxed">
+                            Removing the manual entry friction. By connecting directly to major retailers, ShelfLife becomes an automated inventory of your digital grocery purchases.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 w-8 h-8 rounded-lg bg-brand-purple/20 flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Effortless Tracking</h4>
+                                <p class="text-sm text-slate-400">Zero manual input. Your purchases sync instantly from carts to kitchen.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 w-8 h-8 rounded-lg bg-brand-blue/20 flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Data Sovereignty</h4>
+                                <p class="text-sm text-slate-400">Secure, encrypted connections that prioritize user privacy and utility.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Items / Next Steps -->
+        <section class="relative">
+            <div class="absolute inset-0 bg-brand-teal/5 blur-3xl -z-10 rounded-full"></div>
+            <div class="glass-card rounded-[3rem] p-8 md:p-16 border border-white/5">
+                <h2 class="text-4xl font-display italic font-bold mb-12 text-center">Execution <span class="text-brand-teal">Roadmap</span></h2>
+                
+                <div class="bento-grid">
+                    <!-- Step 1 -->
+                    <div class="col-span-2 glass-card rounded-2xl p-8 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-teal/20 text-brand-teal flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <span class="font-bold text-xl italic">01</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3">Build Calculator MVP</h4>
+                            <p class="text-slate-400 text-sm">Collaborate with Dev team to launch the core lead magnet for our landing page.</p>
+                        </div>
+                        <div class="mt-6 flex items-center gap-2 text-brand-teal font-bold text-xs uppercase tracking-widest">
+                            <span>Status: In Planning</span>
+                            <div class="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-span-2 glass-card rounded-2xl p-8 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <span class="font-bold text-xl italic">02</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3">Launch Pilot Challenge</h4>
+                            <p class="text-slate-400 text-sm">Announce #EmptyTheFridge on Instagram. High prize pool for early engagement.</p>
+                        </div>
+                        <div class="mt-6 flex items-center gap-2 text-brand-orange font-bold text-xs uppercase tracking-widest">
+                            <span>Ready to Launch</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-span-4 glass-card rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 group">
+                        <div class="w-16 h-16 rounded-xl bg-brand-purple/20 text-brand-purple flex items-center justify-center shrink-0 group-hover:rotate-12 transition-transform">
+                            <span class="font-bold text-2xl italic">03</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-bold mb-2">Draft Strategic Proposal</h4>
+                            <p class="text-slate-400">Identity top three grocery delivery leads (Instacart, Amazon Fresh, Walmart) and prepare the partnership pitch deck focusing on customer loyalty.</p>
+                        </div>
+                        <button class="px-8 py-3 bg-brand-purple text-white font-bold rounded-xl hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] transition-all shrink-0">
+                            Pitch Deck Draft
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Ambient Elements -->
+    <div class="fixed top-1/4 -left-64 w-96 h-96 bg-brand-teal/10 rounded-full blur-[120px] -z-20 animate-pulse-slow"></div>
+    <div class="fixed bottom-1/4 -right-64 w-96 h-96 bg-brand-purple/10 rounded-full blur-[120px] -z-20 animate-pulse-slow"></div>
+
+</body>
+</html>
