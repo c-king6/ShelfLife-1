@@ -1,0 +1,5 @@
+﻿"Item Name",Category,"How Many",Container,"Each Contains","Content Unit","Current Amount","Price per Container","Expiry Date","Date Added","In Pantry"
+milk,Dairy,7,pcs,1.00,pcs,7.00,,2026-11-04,"2026-10-28 07:46:57",Yes
+apple,General,1,pcs,1.00,pcs,1.00,40.00,2026-11-11,"2026-10-28 07:35:04",Yes
+vinegar,Spices/Seasonings,3,bottle,1.00,L,1.00,40.00,2027-10-28,"2026-10-28 07:27:59",Yes
+"soy sauce",Condiments,3,bottle,1.00,ml,3.00,120.00,2026-11-12,"2026-10-13 08:12:11",Yes
